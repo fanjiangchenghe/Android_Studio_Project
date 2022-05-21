@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">covid</string>
-    <string name="active">Active</string>
-    <string name="recovered">Recovered</string>
-    <string name="total">Total</string>
-    <string name="deaths">Deaths</string>
+    <string name="active">现有确诊</string>
+    <string name="recovered">治愈</string>
+    <string name="total">累计确诊</string>
+    <string name="deaths">死亡</string>
     <string name="covid_19">Covid-19</string>
-    <string name="country">Country</string>
-    <string name="cases">Cases</string>
+    <string name="country">国家</string>
+    <string name="cases">累计确诊</string>
     <string name="increment_number">+232325</string>
     <string name="number">2323236544</string>
 </resources>

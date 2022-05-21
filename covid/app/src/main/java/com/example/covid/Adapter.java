@@ -16,11 +16,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     int n=1;
     Context context;
-    List<Area> provincelist;
+    List<ModelClass> countrylist;
 
-    public Adapter(Context context, List<Area> provincelist) {
+    public Adapter(Context context, List<ModelClass> countrylist) {
         this.context = context;
-        this.provincelist = provincelist;
+        this.countrylist = countrylist;
     }
 
     @NonNull
@@ -33,28 +33,28 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Area area=provincelist.get(position);
+        ModelClass modelClass=countrylist.get(position);
         if(n==1){
-            holder.cases.setText(NumberFormat.getInstance().format(Integer.parseInt(area.getTotal().getConfirm())));
+            holder.cases.setText(NumberFormat.getInstance().format(Integer.parseInt(modelClass.getCases())));
         }
         else if(n==2){
-            holder.cases.setText(NumberFormat.getInstance().format(Integer.parseInt(area.getTotal().getHeal())));
+            holder.cases.setText(NumberFormat.getInstance().format(Integer.parseInt(modelClass.getRecovered())));
         }
         else if(n==3){
-            holder.cases.setText(NumberFormat.getInstance().format(Integer.parseInt(area.getTotal().getDead())));
+            holder.cases.setText(NumberFormat.getInstance().format(Integer.parseInt(modelClass.getDeaths())));
         }
         else{
-            holder.cases.setText(NumberFormat.getInstance().format(Integer.parseInt(area.getTotal().getSuspect())));
+            holder.cases.setText(NumberFormat.getInstance().format(Integer.parseInt(modelClass.getActive())));
 
         }
 
-        holder.country.setText(area.getName());
+        holder.country.setText(modelClass.getCountry());
 
     }
 
     @Override
     public int getItemCount() {
-        return provincelist.size();
+        return countrylist.size();
     }
 
 
@@ -71,13 +71,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
 
     public void filter(String charText) {
-        if(charText.equals("cases")){
+        if(charText.equals("累计确诊")){
             n=1;
         }
-        else if(charText.equals("recovered")){
+        else if(charText.equals("累计治愈")){
             n=2;
         }
-        else if(charText.equals("deaths")){
+        else if(charText.equals("累计死亡")){
             n=3;
         }
         else{

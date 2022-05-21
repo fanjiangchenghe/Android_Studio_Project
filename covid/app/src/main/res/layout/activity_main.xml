@@ -35,45 +35,20 @@
 
                 </TextView>
 
-<!--                <com.hbb20.CountryCodePicker-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="40dp"-->
-<!--                    app:ccp_autoDetectCountry="true"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    app:ccp_showPhoneCode="false"-->
-<!--                    app:ccp_showFullName="false"-->
-<!--                    android:background="@drawable/country_code_drawable"-->
-<!--                    android:padding="5dp"-->
-<!--                    android:id="@+id/ccp"-->
-<!--                    android:layout_marginRight="20dp"-->
-<!--                    app:ccp_textSize="12dp">-->
+                <com.hbb20.CountryCodePicker
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    app:ccp_autoDetectCountry="true"
+                    android:layout_marginLeft="20dp"
+                    app:ccp_showPhoneCode="false"
+                    app:ccp_showFullName="false"
+                    android:background="@drawable/country_code_drawable"
+                    android:padding="5dp"
+                    android:id="@+id/ccp"
+                    android:layout_marginRight="20dp"
+                    app:ccp_textSize="12dp">
 
-<!--                </com.hbb20.CountryCodePicker>-->
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@drawable/country_code_drawable">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="#2b2e4a"
-                        android:text="武汉"
-                        android:textSize="20dp"
-                        android:paddingRight="15dp"
-                        android:paddingLeft="15dp"
-                        android:id="@+id/cityname">
-
-                    </TextView>
-
-
-
-
-                </LinearLayout>
-
+                </com.hbb20.CountryCodePicker>
 
 
 
